@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Pokemon Profit Calculator</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      width: 100%;
+      max-width: 400px; /* Prevents it from being too wide */
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 22px; /* Slightly larger for mobile readability */
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column; /* Stack label and input for mobile */
+      margin-bottom: 12px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #333;
+      text-align: center;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: 1px solid #ddd;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      input, button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Pokemon Profit Calculator</h2>
+
+    <div class="input-group">
+      <label>Wholesale Box Price (RM):</label>
+      <input type="number" id="boxPrice" placeholder="Enter box price">
+    </div>
+
+    <div class="input-group">
+      <label>Packs in Box?:</label>
+      <input type="number" id="boxQuantity" placeholder="Enter total packs">
+    </div>
+
+    <button onclick="calculateItemPrice()">Calculate Item Price</button>
+    <div class="result" id="itemPriceResult"></div>
+
+    <hr>
+
+    <div class="input-group">
+      <label>Selling Price Per Pack (RM):</label>
+      <input type="number" id="sellPrice" placeholder="Enter selling price">
+    </div>
+
+    <button onclick="calculateProfit()">Calculate Profit</button>
+    <div class="result" id="profitResult"></div>
+  </div>
+
+  <script>
+    function calculateItemPrice() {
+      let boxPrice = parseFloat(document.getElementById('boxPrice').value);
+      let boxQuantity = parseFloat(document.getElementById('boxQuantity').value);
+
+      if (isNaN(boxPrice) || isNaN(boxQuantity) || boxQuantity <= 0) {
+        document.getElementById('itemPriceResult').innerHTML = "Please enter valid numbers!";
+        return;
+      }
+
+      let pricePerItem = boxPrice / boxQuantity;
+      document.getElementById('itemPriceResult').innerHTML = 
+        `Price Per Pack: RM${pricePerItem.toFixed(2)}`;
+    }
+
+    function calculateProfit() {
+      let sellPrice = parseFloat(document.getElementById('sellPrice').value);
+      let boxPrice = parseFloat(document.getElementById('boxPrice').value);
+      let boxQuantity = parseFloat(document.getElementById('boxQuantity').value);
+
+      if (isNaN(sellPrice) || isNaN(boxPrice) || isNaN(boxQuantity) || boxQuantity <= 0) {
+        document.getElementById('profitResult').innerHTML = "Please enter valid numbers!";
+        return;
+      }
+
+      let totalRevenue = sellPrice * boxQuantity;
+      let profit = totalRevenue - boxPrice;
+      let profitPercentage = (profit / boxPrice) * 100;
+
+      document.getElementById('profitResult').innerHTML = 
+        `Total Revenue: RM${totalRevenue.toFixed(2)}<br>
+         Profit: RM${profit.toFixed(2)}<br>
+         Profit Percentage: ${profitPercentage.toFixed(2)}%`;
+    }
+  </script>
+</body>
+</html>
