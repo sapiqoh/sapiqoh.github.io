@@ -204,3 +204,21 @@ header {
     width: 100%;
   }
 }
+
+.work-item {
+  display: block;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.work-item:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.02);
+  color: #000;
+}
+
