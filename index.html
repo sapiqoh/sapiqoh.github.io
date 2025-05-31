@@ -1,60 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sapiqoh</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Title-->
+  <title>Syafiqah | Portfolio</title>
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!--Main/First Section-->
+  <div id="main">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h1 id="name">Sapiqoh</h1>
+    <h2 class="line-1 anim-typewriter">Hi, I'm Syafiqah Ruzana :)</h2>
+  </div>
 
-  <header>
-    <div class="name">Syafiqah Ruzana</div>
-
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!--About Section-->
+  <div id="about">
+    <div class="container">
+      <h1 class="text-center aboutHeading">About Me</h1>
+      <p class="aboutPG text-center">I'm a final year Bachelor of Computer Science (Hons.) Multimedia Computing student at UiTM Jasin. My goal is to continuously expand my skills, explore new technologies, and grow both personally and professionally in the tech industry.</p>
     </div>
+  </div>
 
-    <nav class="menu" id="menu">
-      <a href="#" id="nav-home">Home</a>
-      <a href="#" id="nav-contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Home page now contains Resume & Works -->
-  <main id="main-page">
-    <div class="portfolio-container">
-      <div class="portfolio-box" id="resume-box">
-        <img src="https://img.icons8.com/ios-filled/100/007bff/resume.png" alt="Resume Icon"/>
-        <h3>Resume</h3>
-        <p>View my resume</p>
+  <!--Portfolio Section-->
+  <div id="portfolio">
+    <div class="container my-5">
+      <h1 class="text-center aboutHeading">Portfolio</h1>
+      
+      <div class="portfolio-container">
+        <div class="portfolio-box" id="resume-box">
+          <img src="https://img.icons8.com/ios-filled/100/007bff/resume.png" alt="Resume Icon"/>
+          <h3>Resume</h3>
+          <p>View my resume</p>
+        </div>
+        <div class="portfolio-box" id="works-box">
+          <img src="https://img.icons8.com/ios-filled/100/007bff/source-code.png" alt="Works Icon"/>
+          <h3>Works</h3>
+          <p>Check out my side projects</p>
+        </div>
+        <div class="portfolio-box" id="transcript-box">
+          <img src="https://img.icons8.com/ios-filled/100/007bff/document.png" alt="Transcript Icon"/>
+          <h3>Mini Transcript</h3>
+          <p>View transcript</p>
+        </div>
       </div>
-      <div class="portfolio-box" id="works-box">
-        <img src="https://img.icons8.com/ios-filled/100/007bff/source-code.png" alt="Works Icon"/>
-        <h3>Works</h3>
-        <p>Check out my side projects</p>
+
+      <div class="works-list" id="works-list">
+        <a href="website.html" class="work-item">Websites 💻 – HTML, CSS, JavaScript, PHP,  Java EE</a>
+        <a href="mobileApp.html" class="work-item">Mobile App 📱 – Android Studio</a>
+        <a href="game.html" class="work-item">Game 🎮 – Construct, Unity</a>
+        <a href="model.html" class="work-item">3D Modelling 🧱 – Blender, 3DS Max</a>
       </div>
-    </div>
 
-    <div class="works-list" id="works-list">
-      <a href="https://link-to-project1.com" target="_blank" class="work-item">Project 1 – Description of side project</a>
-      <a href="https://link-to-project2.com" target="_blank" class="work-item">Project 2 – Description of side project</a>
-      <a href="https://link-to-project3.com" target="_blank" class="work-item">Project 3 – Description of side project</a>
     </div>
-  </main>
+  </div>
 
-  <!-- Contact page -->
-  <section id="contact-page" style="display:none;">
-    <div class="contact-container">
-      <h2>Contact Me</h2>
-      <p>Email: syafiqahruzana09@gmail.com</p>
-      <p>Phone: 012-9010003</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+
+
+
+
+  <!--Footer section-->
+  <footer class="footer">
+    <div class="container text-center">
+      <span class="footer-text">Copyright © 2025 | All Rights Reserved</span>
     </div>
-  </section>
+  </footer>
 
-  <script src="script.js"></script>
+  <!--Bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
+<script>
+
+
+// Works toggle
+const worksBox = document.getElementById('works-box');
+const worksList = document.getElementById('works-list');
+
+worksBox.addEventListener('click', () => {
+  worksList.classList.toggle('active');
+});
+
+// Resume box
+const resumeBox = document.getElementById('resume-box');
+resumeBox.addEventListener('click', () => {
+  // Replace with actual resume link if needed
+  window.open(); //here!!
+});
+
+// Transcript
+const transcriptBox = document.getElementById('transcript-box');
+transcriptBox.addEventListener('click', () => {
+  window.open('pdf/transkripDip.pdf'); //here!!
+})
+
+</script>
+
+
 </html>
