@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website | Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <style>
+    body {
+      padding: 40px;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+    }
+
+    .project-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    .media-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start; /* align top */
+      flex-wrap: nowrap; /* prevent wrapping */
+      margin-bottom: 20px;
+    }
+
+    .project-img,
+      .project-video {
+        width: 45%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex: 1;
+    }
+
+    .project-description {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .download-report {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-report:hover {
+      background-color: #0056b3;
+      color: white;
+      text-decoration: none;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      display: inline-block;
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #007bff;
+    }
+
+    /* Responsive */
+   @media (max-width: 768px) {
+    .media-container {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .project-img,
+    .project-video {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="project-container">
+    <h2>🏕️🔥 Bonfire Camp</h2>
+
+    <div class="media-container">
+      <img src="img/bonfire.jpg" alt="Project Image" class="project-img" />
+
+      <iframe
+        class="project-video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/a0pYKxglyjE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p class="project-description" style="text-align: justify;">
+      Bonfire Camp Management System is a web-based app developed for the CSC584 Enterprise Programming course. In this project, I took part in both frontend and 
+      backend of the website development.
+    </p>
+
+    <a href="pdf/bonfireReport.pdf" class="download-report" target="_blank" download>
+      View Project Report (PDF)
+    </a>
+
+    <br />
+    <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+  </div>
+</body>
+
+</html>
