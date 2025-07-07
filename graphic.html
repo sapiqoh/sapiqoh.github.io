@@ -40,8 +40,10 @@
     .project-img,
       .project-video {
         width: 45%;
-        height: 250px;
+        /*height: 250px; */
         object-fit: cover;
+        height: auto;     /* Let height adjust naturally */
+        aspect-ratio: 16/9; /* Keeps a consistent size ratio */
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         flex: 1;
